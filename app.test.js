@@ -60,6 +60,6 @@ describe('Todos API', () => {
     await request(app).post('/todos').send({ title: 'To delete' });
     const res = await request(app).delete('/todos/1');
     expect(res.statusCode).toBe(200);
-    expect(res.body.message).toBe('Task deleted');
+    expect(res.body.message).toBe('Todo deleted');
   });
 });
